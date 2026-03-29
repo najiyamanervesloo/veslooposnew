@@ -170,40 +170,13 @@
             font-weight: 600;
         }
 
-        .badge-green {
-            background: var(--green-l);
-            color: var(--green);
-        }
-
-        .badge-red {
-            background: var(--red-l);
-            color: var(--red);
-        }
-
-        .badge-amber {
-            background: var(--amber-l);
-            color: var(--amber);
-        }
-
-        .badge-blue {
-            background: var(--blue-l);
-            color: var(--blue);
-        }
-
-        .badge-slate {
-            background: var(--bg2);
-            color: var(--slate);
-        }
-
-        .badge-purple {
-            background: var(--purple-l);
-            color: var(--purple);
-        }
-
-        .badge-saffron {
-            background: var(--saffron-l);
-            color: var(--saffron);
-        }
+        .badge-green { background: var(--green-l); color: var(--green); }
+        .badge-red { background: var(--red-l); color: var(--red); }
+        .badge-amber { background: var(--amber-l); color: var(--amber); }
+        .badge-blue { background: var(--blue-l); color: var(--blue); }
+        .badge-slate { background: var(--bg2); color: var(--slate); }
+        .badge-purple { background: var(--purple-l); color: var(--purple); }
+        .badge-saffron { background: var(--saffron-l); color: var(--saffron); }
 
         /* Tables */
         table {
@@ -335,8 +308,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 2000;
-            /* Increased to stay above cart overlay */
+            z-index: 2000; /* Increased to stay above cart overlay */
             backdrop-filter: blur(4px);
             padding: 16px;
             opacity: 1;
@@ -399,28 +371,15 @@
             animation: slideIn 0.3s forwards;
         }
 
-        .toast-success {
-            background: var(--green);
-        }
-
-        .toast-error {
-            background: var(--red);
-        }
-
-        .toast-warning {
-            background: var(--amber);
-        }
+        .toast-success { background: var(--green); }
+        .toast-error { background: var(--red); }
+        .toast-warning { background: var(--amber); }
 
         /* Print Styles */
-        #printable-receipt {
-            display: none;
-        }
+        #printable-receipt { display: none; }
 
         @media print {
-            body * {
-                visibility: hidden;
-            }
-
+            body * { visibility: hidden; }
             #printable-receipt {
                 display: block !important;
                 position: absolute;
@@ -432,265 +391,91 @@
                 visibility: visible;
                 background: white;
             }
-
-            #printable-receipt * {
-                visibility: visible;
-            }
+            #printable-receipt * { visibility: visible; }
         }
 
         /* Animations */
         @keyframes slideIn {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
-
         @keyframes slideUp {
-            from {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
-
         @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         /* Utility Layouts */
-        .flex {
-            display: flex;
-        }
-
-        .flex-col {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .col-span-2 {
-            grid-column: span 2;
-        }
-
-        .items-center {
-            align-items: center;
-        }
-
-        .justify-between {
-            justify-content: space-between;
-        }
-
-        .gap-2 {
-            gap: 8px;
-        }
-
-        .gap-3 {
-            gap: 12px;
-        }
-
-        .gap-4 {
-            gap: 16px;
-        }
-
-        .grid {
-            display: grid;
-        }
-
-        .grid-cols-2 {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .grid-cols-3 {
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        .grid-cols-4 {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-
-        .mt-2 {
-            margin-top: 8px;
-        }
-
-        .mt-4 {
-            margin-top: 16px;
-        }
-
-        .mb-2 {
-            margin-bottom: 8px;
-        }
-
-        .mb-4 {
-            margin-bottom: 16px;
-        }
+        .flex { display: flex; }
+        .flex-col { display: flex; flex-direction: column; }
+        .col-span-2 { grid-column: span 2; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .gap-2 { gap: 8px; }
+        .gap-3 { gap: 12px; }
+        .gap-4 { gap: 16px; }
+        .grid { display: grid; }
+        .grid-cols-2 { grid-template-columns: 1fr 1fr; }
+        .grid-cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+        .grid-cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+        .mt-2 { margin-top: 8px; }
+        .mt-4 { margin-top: 16px; }
+        .mb-2 { margin-bottom: 8px; }
+        .mb-4 { margin-bottom: 16px; }
 
         /* POS Custom Styles */
-        .pos-cats-wrapper::-webkit-scrollbar {
-            display: none;
-        }
-
+        .pos-cats-wrapper::-webkit-scrollbar { display: none; }
         .pos-grid-item:hover {
             border-color: var(--saffron) !important;
             box-shadow: 0 4px 16px rgba(249, 115, 22, .15);
             transform: translateY(-2px);
         }
 
-        .fab-cart {
-            display: none;
-        }
-
-        .cart-header-mobile {
-            display: none;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-        }
-
-        .sidebar-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(15, 23, 42, 0.6);
-            z-index: 999;
-            backdrop-filter: blur(2px);
-        }
-
-        .sidebar-overlay.active {
-            display: block;
-        }
+        .fab-cart { display: none; }
+        .cart-header-mobile { display: none; }
+        .mobile-menu-btn { display: none; }
+        
+        .sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(15,23,42,0.6); z-index: 999; backdrop-filter: blur(2px); }
+        .sidebar-overlay.active { display: block; }
 
         /* Responsive Adjustments */
         @media (max-width: 1024px) {
-            .grid-cols-3 {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .grid-cols-4 {
-                grid-template-columns: 1fr 1fr;
-            }
+            .grid-cols-3 { grid-template-columns: 1fr 1fr; }
+            .grid-cols-4 { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 768px) {
-            .grid-cols-2 {
-                grid-template-columns: 1fr;
-            }
-
-            .grid-cols-3 {
-                grid-template-columns: 1fr;
-            }
-
-            .grid-cols-4 {
-                grid-template-columns: 1fr;
-            }
-
-            .stat-card {
-                min-width: 100%;
-            }
-
-            .topbar {
-                padding: 12px 16px;
-            }
-
-            .view-container {
-                padding: 16px 16px 80px;
-            }
+            .grid-cols-2 { grid-template-columns: 1fr; }
+            .grid-cols-3 { grid-template-columns: 1fr; }
+            .grid-cols-4 { grid-template-columns: 1fr; }
+            .stat-card { min-width: 100%; }
+            .topbar { padding: 12px 16px; }
+            .view-container { padding: 16px 16px 80px; }
 
             /* Mobile Sidebar */
-            .sidebar {
-                position: fixed;
-                left: -260px;
-                top: 0;
-                bottom: 0;
-                z-index: 1000;
-                transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            }
-
-            .sidebar.active {
-                left: 0;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
+            .sidebar { position: fixed; left: -260px; top: 0; bottom: 0; z-index: 1000; transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+            .sidebar.active { left: 0; }
+            .mobile-menu-btn { display: block; }
+            
             /* Mobile POS Styles */
-            .pos-wrapper {
-                flex-direction: column !important;
-            }
-
-            .pos-cart-panel {
-                position: fixed;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                width: 100% !important;
-                border-left: none;
-                transform: translateX(100%);
-                transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-                z-index: 1001;
-            }
-
-            .pos-cart-panel.open {
-                transform: translateX(0);
-            }
-
-            .cart-header-mobile {
-                display: flex !important;
-            }
-
+            .pos-wrapper { flex-direction: column !important; }
+            .pos-cart-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 100% !important; border-left: none; transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); z-index: 1001; }
+            .pos-cart-panel.open { transform: translateX(0); }
+            .cart-header-mobile { display: flex !important; }
+            
             /* FAB Cart */
-            .fab-cart {
-                display: flex;
-                position: absolute;
-                bottom: 80px;
-                right: 20px;
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                background: var(--saffron);
-                color: white;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 0 6px 16px rgba(249, 115, 22, 0.4);
-                z-index: 90;
-                transition: transform 0.2s;
-            }
-
-            .fab-cart:active {
-                transform: scale(0.95);
-            }
+            .fab-cart { display: flex; position: absolute; bottom: 80px; right: 20px; width: 60px; height: 60px; border-radius: 50%; background: var(--saffron); color: white; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(249, 115, 22, 0.4); z-index: 90; transition: transform 0.2s; }
+            .fab-cart:active { transform: scale(0.95); }
 
             /* Grid & Visibility Fixes */
-            .col-span-2 {
-                grid-column: span 1 !important;
-            }
-
-            .hide-mobile {
-                display: none !important;
-            }
+            .col-span-2 { grid-column: span 1 !important; }
+            .hide-mobile { display: none !important; }
 
             /* Enforce 2 columns for Product Grid on mobile */
-            #pos-grid {
-                grid-template-columns: repeat(2, 1fr) !important;
-                padding: 0 16px 80px !important;
-                gap: 12px !important;
-            }
+            #pos-grid { grid-template-columns: repeat(2, 1fr) !important; padding: 0 16px 80px !important; gap: 12px !important; }
         }
     </style>
 </head>
@@ -700,39 +485,26 @@
     <!-- Login Screen -->
     <div id="login-screen"
         style="position: fixed; inset: 0; background: var(--navy); display: flex; align-items: center; justify-content: center; z-index: 9999; padding: 16px;">
-
+        
         <!-- Step 1: Profile Selection -->
-        <div class="card" id="login-role-card"
-            style="padding: 40px; width: 100%; max-width: 420px; text-align: center; animation: slideUp 0.3s;">
+        <div class="card" id="login-role-card" style="padding: 40px; width: 100%; max-width: 420px; text-align: center; animation: slideUp 0.3s;">
             <div
                 style="width: 70px; height: 70px; margin: 0 auto 20px; border-radius: 16px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #fff; padding: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                 <img src="poslogo.png" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;">
             </div>
             <h2 style="margin-bottom: 5px; font-weight: 800; font-size: 24px; color: var(--text);">Bharat POS</h2>
-            <p style="color: var(--slate); font-size: 13px; margin-bottom: 30px;">Select your profile to access the
-                register</p>
-
+            <p style="color: var(--slate); font-size: 13px; margin-bottom: 30px;">Select your profile to access the register</p>
+            
             <div class="grid grid-cols-2 gap-4" style="margin-bottom: 24px;">
                 <!-- Admin Card -->
-                <div onclick="showLoginPass('Admin')"
-                    style="cursor: pointer; padding: 24px 16px; border: 2px solid var(--border); border-radius: 14px; transition: all 0.2s; background: var(--white);"
-                    onmouseover="this.style.borderColor='var(--saffron)'; this.style.boxShadow='0 4px 12px rgba(249,115,22,0.1)';"
-                    onmouseout="this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
-                    <div
-                        style="width: 54px; height: 54px; background: var(--saffron-l); color: var(--saffron); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 26px;">
-                        👨‍💼</div>
+                <div onclick="showLoginPass('Admin')" style="cursor: pointer; padding: 24px 16px; border: 2px solid var(--border); border-radius: 14px; transition: all 0.2s; background: var(--white);" onmouseover="this.style.borderColor='var(--saffron)'; this.style.boxShadow='0 4px 12px rgba(249,115,22,0.1)';" onmouseout="this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
+                    <div style="width: 54px; height: 54px; background: var(--saffron-l); color: var(--saffron); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 26px;">👨‍💼</div>
                     <div style="font-weight: 700; font-size: 15px; color: var(--text);">Store Admin</div>
-                    <div style="font-size: 11px; color: var(--slate); margin-top: 4px; font-weight: 500;">Owner Access
-                    </div>
+                    <div style="font-size: 11px; color: var(--slate); margin-top: 4px; font-weight: 500;">Owner Access</div>
                 </div>
                 <!-- Staff Card -->
-                <div onclick="showLoginPass('Cashier')"
-                    style="cursor: pointer; padding: 24px 16px; border: 2px solid var(--border); border-radius: 14px; transition: all 0.2s; background: var(--white);"
-                    onmouseover="this.style.borderColor='var(--blue)'; this.style.boxShadow='0 4px 12px rgba(37,99,235,0.1)';"
-                    onmouseout="this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
-                    <div
-                        style="width: 54px; height: 54px; background: var(--blue-l); color: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 26px;">
-                        👨‍💻</div>
+                <div onclick="showLoginPass('Cashier')" style="cursor: pointer; padding: 24px 16px; border: 2px solid var(--border); border-radius: 14px; transition: all 0.2s; background: var(--white);" onmouseover="this.style.borderColor='var(--blue)'; this.style.boxShadow='0 4px 12px rgba(37,99,235,0.1)';" onmouseout="this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
+                    <div style="width: 54px; height: 54px; background: var(--blue-l); color: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 26px;">👨‍💻</div>
                     <div style="font-weight: 700; font-size: 15px; color: var(--text);">Cashier</div>
                     <div style="font-size: 11px; color: var(--slate); margin-top: 4px; font-weight: 500;">POS Only</div>
                 </div>
@@ -744,35 +516,25 @@
         </div>
 
         <!-- Step 2: Password Entry -->
-        <div class="card" id="login-pass-card"
-            style="padding: 30px 40px 40px; width: 100%; max-width: 400px; text-align: center; display: none; animation: slideIn 0.3s;">
+        <div class="card" id="login-pass-card" style="padding: 30px 40px 40px; width: 100%; max-width: 400px; text-align: center; display: none; animation: slideIn 0.3s;">
             <div style="display: flex; justify-content: flex-start; margin-bottom: 10px;">
-                <button type="button" onclick="hideLoginPass()"
-                    style="background: none; border: none; color: var(--slate); font-size: 14px; display: flex; align-items: center; gap: 6px; cursor: pointer; padding: 8px 0; font-weight: 600;">
-                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                        <line x1="19" y1="12" x2="5" y2="12"></line>
-                        <polyline points="12 19 5 12 12 5"></polyline>
-                    </svg>
+                <button type="button" onclick="hideLoginPass()" style="background: none; border: none; color: var(--slate); font-size: 14px; display: flex; align-items: center; gap: 6px; cursor: pointer; padding: 8px 0; font-weight: 600;">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                     Back
                 </button>
             </div>
-
-            <div id="selected-profile-icon"
-                style="width: 70px; height: 70px; background: var(--saffron-l); color: var(--saffron); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 32px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                👨‍💼</div>
-            <h2 style="margin-bottom: 5px; font-weight: 800; font-size: 22px; color: var(--text);">Welcome back, <span
-                    id="selected-profile-name">Admin</span>!</h2>
+            
+            <div id="selected-profile-icon" style="width: 70px; height: 70px; background: var(--saffron-l); color: var(--saffron); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 32px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">👨‍💼</div>
+            <h2 style="margin-bottom: 5px; font-weight: 800; font-size: 22px; color: var(--text);">Welcome back, <span id="selected-profile-name">Admin</span>!</h2>
             <p style="color: var(--slate); font-size: 13px; margin-bottom: 30px;">Please enter your PIN/Password</p>
-
+            
             <form onsubmit="handleLogin(event)">
                 <div style="text-align: left; margin-bottom: 24px;">
                     <input type="password" id="login-password" class="inp" placeholder="Enter password (admin)" required
                         style="padding: 16px; font-size: 18px; text-align: center; letter-spacing: 4px; border-width: 2px; border-radius: 10px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);" />
                 </div>
                 <button type="submit" class="btn"
-                    style="width: 100%; padding: 16px; font-size: 16px; border-radius: 10px; font-weight: 700; box-shadow: 0 4px 12px rgba(249,115,22,0.3);">Unlock
-                    Register</button>
+                    style="width: 100%; padding: 16px; font-size: 16px; border-radius: 10px; font-weight: 700; box-shadow: 0 4px 12px rgba(249,115,22,0.3);">Unlock Register</button>
             </form>
         </div>
     </div>
@@ -801,13 +563,10 @@
                     Scan Barcode
                 </div>
                 <div style="display:flex; gap:16px; align-items:center;">
-                    <button onclick="toggleCamera()"
-                        style="background: none; color: var(--slate); display: flex; font-size:18px;"
-                        title="Switch Camera">
+                    <button onclick="toggleCamera()" style="background: none; color: var(--slate); display: flex; font-size:18px;" title="Switch Camera">
                         🔄
                     </button>
-                    <button onclick="closeBarcodeScanner()"
-                        style="background: none; color: var(--slate); display: flex;">
+                    <button onclick="closeBarcodeScanner()" style="background: none; color: var(--slate); display: flex;">
                         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
                             stroke-linecap="round" viewBox="0 0 24 24">
                             <line x1="18" y1="6" x2="6" y2="18" />
@@ -826,7 +585,7 @@
 
     <!-- Main App Container (Hidden initially) -->
     <div class="app-container" id="app-container" style="display: none;">
-
+        
         <!-- Sidebar -->
         <div class="sidebar">
             <div style="padding: 20px 18px 16px; display: flex; align-items: center; gap: 10px;">
@@ -860,23 +619,16 @@
         <div class="main-content">
             <div class="topbar">
                 <div style="display: flex; align-items: center; gap: 12px;">
-                    <button class="mobile-menu-btn" onclick="toggleSidebar()"
-                        style="background:none; color:var(--slate); padding:4px;">
-                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                            <line x1="3" y1="12" x2="21" y2="12"></line>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <line x1="3" y1="18" x2="21" y2="18"></line>
-                        </svg>
+                    <button class="mobile-menu-btn" onclick="toggleSidebar()" style="background:none; color:var(--slate); padding:4px;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                     </button>
                     <div id="topbar-title" style="font-weight: 800; font-size: 18px;">Dashboard</div>
                 </div>
                 <div style="display: flex; align-items: center; gap: 14px;">
-                    <div id="sync-status" class="hide-mobile"
-                        style="font-size:12px; font-weight:600; color:var(--slate);">☁️ Local Mode
+                    <div id="sync-status" class="hide-mobile" style="font-size:12px; font-weight:600; color:var(--slate);">☁️ Local Mode
                     </div>
                     <div id="topbar-date" class="hide-mobile" style="font-size: 13px; color: var(--slate);"></div>
-
+                    
                     <!-- NOTIFICATION BELL -->
                     <div style="position: relative; cursor: pointer;" onclick="openNotifications()"
                         title="Notifications">
@@ -1205,75 +957,97 @@
         let html5QrCode = null;
         let barcodeTarget = 'pos';
         let currentFacingMode = "environment";
+        let isScannerRunning = false;
 
         function openBarcodeScanner(target = 'pos') {
             barcodeTarget = target;
             document.getElementById('scanner-modal').classList.remove('hidden');
-            if (!html5QrCode) {
-                html5QrCode = new Html5Qrcode("reader");
-            }
-            startScanner();
+            
+            // Thoda delay add kiya taaki modal display hone ke baad camera initialize ho
+            setTimeout(() => {
+                if (!html5QrCode) {
+                    html5QrCode = new Html5Qrcode("reader");
+                }
+                if (!isScannerRunning) {
+                    startScanner();
+                }
+            }, 250);
         }
 
         function startScanner() {
-            if (html5QrCode && html5QrCode.isScanning) {
-                html5QrCode.stop().then(() => {
-                    initScanner();
-                }).catch(err => console.log(err));
-            } else {
-                initScanner();
-            }
-        }
-
-        function initScanner() {
             html5QrCode.start(
                 { facingMode: currentFacingMode },
-                { fps: 10, qrbox: { width: 250, height: 150 } },
+                { fps: 10, qrbox: { width: 200, height: 150 } }, // Size chota kiya for mobile screens
                 (decodedText, decodedResult) => {
-                    closeBarcodeScanner();
-
-                    if (barcodeTarget === 'pos') {
-                        const searchBox = document.getElementById('pos-search');
-                        if (searchBox) {
-                            searchBox.value = decodedText;
-                            posHandleBarcodeFallback(decodedText);
-                        }
-                    } else if (barcodeTarget === 'product') {
-                        const barcodeInput = document.getElementById('product-barcode-input');
-                        if (barcodeInput) {
-                            barcodeInput.value = decodedText;
-                            proState.form.barcode = decodedText;
-                        }
-                    } else if (barcodeTarget === 'generator') {
-                        const searchBox = document.getElementById('barcode-gen-search');
-                        if (searchBox) {
-                            searchBox.value = decodedText;
-                            barcodeState.search = decodedText;
-                            updateBarcodeTable();
-                        }
+                    // Agar ek baar scan ho gaya to multiple trigger hone se rokein
+                    if(isScannerRunning) {
+                        isScannerRunning = false; // Prevent overlapping scans immediately
+                        closeBarcodeScanner();
+                        // Thoda delay taaki modal close ho aur UI freeze na ho
+                        setTimeout(() => {
+                            handleScannedText(decodedText);
+                        }, 300);
                     }
-                    showToast("Barcode scanned!", "success");
                 },
                 (errorMessage) => {
+                    // Ignore parse errors (runs every frame)
                 }
-            ).catch(err => {
+            ).then(() => {
+                isScannerRunning = true;
+            }).catch(err => {
+                console.error("Camera Error:", err);
                 showToast("Camera access denied or unavailable", "error");
                 closeBarcodeScanner();
             });
         }
 
+        function handleScannedText(decodedText) {
+            if (barcodeTarget === 'pos') {
+                const searchBox = document.getElementById('pos-search');
+                if (searchBox) {
+                    searchBox.value = decodedText;
+                    posHandleBarcodeFallback(decodedText);
+                }
+            } else if (barcodeTarget === 'product') {
+                const barcodeInput = document.getElementById('product-barcode-input');
+                if (barcodeInput) {
+                    barcodeInput.value = decodedText;
+                    proState.form.barcode = decodedText;
+                }
+                showToast("Barcode scanned successfully!", "success");
+            } else if (barcodeTarget === 'generator') {
+                const searchBox = document.getElementById('barcode-gen-search');
+                if (searchBox) {
+                    searchBox.value = decodedText;
+                    barcodeState.search = decodedText;
+                    updateBarcodeTable();
+                }
+                showToast("Barcode scanned successfully!", "success");
+            }
+        }
+
         function toggleCamera() {
-            currentFacingMode = currentFacingMode === "environment" ? "user" : "environment";
-            startScanner();
+            if (isScannerRunning) {
+                html5QrCode.stop().then(() => {
+                    isScannerRunning = false;
+                    currentFacingMode = currentFacingMode === "environment" ? "user" : "environment";
+                    startScanner();
+                }).catch(err => console.log(err));
+            } else {
+                currentFacingMode = currentFacingMode === "environment" ? "user" : "environment";
+                startScanner();
+            }
         }
 
         function closeBarcodeScanner() {
             document.getElementById('scanner-modal').classList.add('hidden');
-            if (html5QrCode) {
+            if (html5QrCode && isScannerRunning) {
                 html5QrCode.stop().then(() => {
                     html5QrCode.clear();
+                    isScannerRunning = false;
                 }).catch(err => {
                     console.error("Failed to stop scanner", err);
+                    isScannerRunning = false;
                 });
             }
         }
@@ -1297,16 +1071,16 @@
 
         function getProductIcon(p) {
             const n = p.name.toLowerCase();
-            if (n.includes('rice')) return '🌾';
-            if (n.includes('salt')) return '🧂';
-            if (n.includes('butter') || n.includes('dairy')) return '🥛';
-            if (n.includes('toothpaste') || n.includes('wash')) return '🧴';
-            if (n.includes('detergent') || n.includes('surf')) return '🫧';
-            if (n.includes('chips')) return '🥔';
-            if (n.includes('frooti') || n.includes('mango') || n.includes('beverage')) return '🧃';
-            if (n.includes('soap')) return '🧼';
-            if (n.includes('biscuits') || n.includes('parle') || n.includes('snack')) return '🍪';
-            if (n.includes('noodles') || n.includes('maggi')) return '🍜';
+            if(n.includes('rice')) return '🌾';
+            if(n.includes('salt')) return '🧂';
+            if(n.includes('butter') || n.includes('dairy')) return '🥛';
+            if(n.includes('toothpaste') || n.includes('wash')) return '🧴';
+            if(n.includes('detergent') || n.includes('surf')) return '🫧';
+            if(n.includes('chips')) return '🥔';
+            if(n.includes('frooti') || n.includes('mango') || n.includes('beverage')) return '🧃';
+            if(n.includes('soap')) return '🧼';
+            if(n.includes('biscuits') || n.includes('parle') || n.includes('snack')) return '🍪';
+            if(n.includes('noodles') || n.includes('maggi')) return '🍜';
             return '📦';
         }
 
@@ -1371,9 +1145,9 @@
             document.getElementById('login-role-card').style.display = 'none';
             document.getElementById('login-pass-card').style.display = 'block';
             document.getElementById('selected-profile-name').innerText = role;
-
+            
             const iconEl = document.getElementById('selected-profile-icon');
-            if (role === 'Admin') {
+            if(role === 'Admin') {
                 iconEl.innerHTML = '👨‍💼';
                 iconEl.style.background = 'var(--saffron-l)';
                 iconEl.style.color = 'var(--saffron)';
@@ -1382,7 +1156,7 @@
                 iconEl.style.background = 'var(--blue-l)';
                 iconEl.style.color = 'var(--blue)';
             }
-
+            
             setTimeout(() => {
                 const pwdInput = document.getElementById('login-password');
                 pwdInput.value = '';
@@ -1448,11 +1222,11 @@
                 b.classList.toggle('active', b.getAttribute('data-id') === viewId);
             });
             el('topbar-title').innerText = NAV.find(n => n.id === viewId).label;
-
+            
             // Close mobile sidebar on navigate
             document.querySelector('.sidebar').classList.remove('active');
             const overlay = document.getElementById('sidebar-overlay');
-            if (overlay) overlay.classList.remove('active');
+            if(overlay) overlay.classList.remove('active');
 
             renderCurrentView();
         }
@@ -1580,7 +1354,7 @@
         function renderPOS(root) {
             // Keep state intact if navigating back, unless specifically cleared
             // Only reset non-cart items on fresh load
-            if (!posState.cart) posState.cart = [];
+            if(!posState.cart) posState.cart = [];
 
             root.style.padding = '0';
             root.style.display = 'flex';
@@ -1597,7 +1371,7 @@
                     
                     <div style="display:flex; align-items:center; background: var(--white); border: 1.5px solid var(--border); border-radius: 24px; padding: 6px 16px; margin-bottom: 16px;">
                         <span style="color:var(--slate2); margin-right: 8px; display:flex;">${ic.search}</span>
-                        <input id="pos-search" value="${posState.search}" oninput="posState.search=this.value; updatePOSGrid();" placeholder="Search products..." style="border:none; outline:none; flex:1; font-size:14px; color:var(--text);" />
+                        <input id="pos-search" value="${posState.search}" oninput="posState.search=this.value; updatePOSGrid();" onkeydown="if(event.key === 'Enter') { event.preventDefault(); posHandleBarcodeFallback(this.value); }" placeholder="Search products or scan barcode..." style="border:none; outline:none; flex:1; font-size:14px; color:var(--text);" />
                         <button onclick="openBarcodeScanner('pos')" style="background:none; color:var(--slate); padding:4px; display:flex;">
                             ${ic.camera}
                         </button>
@@ -1659,8 +1433,8 @@
 
         function posRenderCustSelect() {
             const s = (posState.custSearch || "").toLowerCase();
-            const filtered = appData.customers.filter(c =>
-                String(c.name || "").toLowerCase().includes(s) ||
+            const filtered = appData.customers.filter(c => 
+                String(c.name || "").toLowerCase().includes(s) || 
                 String(c.phone || "").includes(s)
             );
             const sel = document.getElementById('pos-cust');
@@ -1685,11 +1459,11 @@
         function updatePOSGrid() {
             const s = posState.search.toLowerCase();
             const filtered = appData.products.filter(p => (posState.cat === "All" || p.cat === posState.cat) && (String(p.name || "").toLowerCase().includes(s) || String(p.barcode || "").toLowerCase().includes(s)));
-
+            
             el('pos-grid').innerHTML = filtered.map(p => {
                 const icon = getProductIcon(p);
-                const imageContent = p.image
-                    ? `<img src="${p.image}" style="width:100%; height:100%; object-fit:cover;" />`
+                const imageContent = p.image 
+                    ? `<img src="${p.image}" style="width:100%; height:100%; object-fit:cover;" />` 
                     : `<span style="font-size:54px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));">${icon}</span>`;
 
                 return `
@@ -1732,8 +1506,18 @@
             b = String(b).trim();
             if (!b) return;
             const p = appData.products.find(x => String(x.barcode).trim() === b);
-            if (p) { posAddToCart(p.id); el('pos-search').value = ""; posState.search = ""; updatePOSGrid(); }
-            else { el('pos-search').value = ""; posState.search = ""; updatePOSGrid(); showToast("Barcode not found", "error"); }
+            if (p) { 
+                posAddToCart(p.id); 
+                el('pos-search').value = ""; 
+                posState.search=""; 
+                updatePOSGrid(); 
+            }
+            else { 
+                el('pos-search').value = ""; 
+                posState.search=""; 
+                updatePOSGrid(); 
+                showToast("Barcode not found", "error"); 
+            }
         }
 
         function posHandleCust(id) {
@@ -1745,7 +1529,7 @@
 
         function updatePOSCart() {
             const c = posState.cart;
-
+            
             // Update mobile FAB badge
             const totalQty = c.reduce((sum, item) => sum + item.qty, 0);
             const fabBadge = document.getElementById('fab-badge');
@@ -1938,10 +1722,10 @@
             });
 
             closeModal();
-
+            
             // Close mobile cart pane if open
             const cartPanel = document.getElementById('pos-cart-panel');
-            if (cartPanel) cartPanel.classList.remove('open');
+            if(cartPanel) cartPanel.classList.remove('open');
 
             posShowSuccess(inv);
 
@@ -2136,14 +1920,14 @@
 
         // -- PRODUCTS --
         let proState = { search: "", form: {} };
-
+        
         function handleProductImageUpload(event) {
             const file = event.target.files[0];
             if (!file) return;
             const reader = new FileReader();
-            reader.onload = function (e) {
+            reader.onload = function(e) {
                 const img = new Image();
-                img.onload = function () {
+                img.onload = function() {
                     const canvas = document.createElement('canvas');
                     const MAX_WIDTH = 200;
                     const MAX_HEIGHT = 200;
@@ -2166,10 +1950,10 @@
                     const ctx = canvas.getContext('2d');
                     ctx.drawImage(img, 0, 0, width, height);
                     const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
-
+                    
                     proState.form.image = dataUrl;
                     const preview = document.getElementById('product-image-preview');
-                    if (preview) {
+                    if(preview) {
                         preview.src = dataUrl;
                         preview.style.display = 'block';
                     }
